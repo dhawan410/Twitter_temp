@@ -16,6 +16,7 @@ app.listen(3000, async ()=>{
     //console.log(tweet);
     //const tweets=await Tweet.find({userEmail:'aman@mail.com'});
     const tweetrepo=new TweetRepository();
-    const tweet=await tweetrepo.update('651d31ad9fc3ebdc5b9b7745',{content:'i m updating'});
-    console.log(tweet);
+    //const tweet=await tweetrepo.update('651d31ad9fc3ebdc5b9b7745',{content:'i m updating'});
+    const tweet= await tweetrepo.getAll(2,2);
+    console.log(tweet[0].contentwithemail);
 });
