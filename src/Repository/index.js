@@ -1,4 +1,8 @@
-module.exports={
-    TweetRepository:require('./tweet-Repository'),
-    HashtagRepository:require('./hashtag-repository')
+import TweetRepository from './tweet-Repository.js'
+import HashtagRepository from './hashtag-repository.js'
+
+
+export {
+    TweetRepository,
+    HashtagRepository
 }
