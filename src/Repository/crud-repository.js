@@ -31,7 +31,7 @@ class crudRepository{
             throw error;
         }
     }
-    async getAll(id){
+    async getAll(){
         try{
             const result=await this.model.find({});
             return result;
@@ -41,4 +41,15 @@ class crudRepository{
             throw error;
         }
     }
+    async update(id,data){
+        try{
+            const result=await this.model.findByIdAndUpdate(id,data,{new:true});
+            return result;
+        }
+        catch(error){
+            console.log("something went wrong in crud repo");
+            throw error;
+        }
+    }
 }
+export default crudRepository;
